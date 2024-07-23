@@ -10,12 +10,13 @@ Your solution must use  O(1) additional space.'''
 
 from typing import List
 def twoSum(numbers: List[int], target: int) -> List[int]:
-        
-        for i in range(0,len(numbers)):
-            for j in range(0,len(numbers)):
-                if numbers[i]+numbers[j]==target and i!=j:
-                    return [i+1,j+1]
-        
+        dict1={}
+        for i in range(0, len(numbers)):
+                compliment =  target -numbers[i]
+                if compliment not in dict1.keys():
+                        dict1[numbers[i]]=i+1
+                else:
+                        return [dict1[compliment],i+1]
         return []
 
 print(twoSum([2,3,4],6))

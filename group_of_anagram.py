@@ -35,17 +35,14 @@ def groupAnagrams(strs):
     return list_f
 
 def correct_sol(strs):
-    # Create a dictionary to store the grouped anagrams
+    # Create a empty dictionary to store the grouped anagrams
     anagrams_dict = defaultdict(list)
 
     # Group the anagrams based on their sorted forms
     for word in strs:
         sorted_word = ''.join(sorted(word))
+        print("SORTED WORDS", sorted_word)
         anagrams_dict[sorted_word].append(word)
-
-    # Print the anagrams_dict for my understanding
-    for key, value in anagrams_dict.items():
-        print(key, ":", value)
 
     # Convert the dictionary values to a list of lists
     grouped_anagrams = list(anagrams_dict.values())

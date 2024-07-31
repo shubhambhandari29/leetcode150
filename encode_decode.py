@@ -12,7 +12,6 @@ def encode(strs: List[str]) -> str:
         for i in strs:
                 i = i[::-1]
                 s = s + '>' + i
-        print("s",s)
         return s
             
 

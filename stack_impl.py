@@ -7,7 +7,6 @@ void pop() removes the element on the top of the stack.
 int top() gets the top element of the stack.
 int getMin() retrieves the minimum element in the stack.
 '''
-
 class MinStack:
 
     def __init__(self):
